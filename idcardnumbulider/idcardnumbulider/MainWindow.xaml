@@ -1,0 +1,34 @@
+﻿<Window x:Class="idcardnumbulider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="身份证号生成器" Height="362.687" Width="500">
+    <Grid Margin="0,0,0.333,-41.333">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="57*"/>
+            <RowDefinition/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="191*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <ComboBox Name="xiala1"  HorizontalAlignment="Left" Margin="102,26,0,0" VerticalAlignment="Top" Width="127" Height="32" FontSize="14" DataContextChanged="xiala1_DataContextChanged" Initialized="xiala1_Initialized" SelectedIndex="0" SelectionChanged="xiala1_SelectionChanged" >
+           </ComboBox>
+        <ComboBox Name="xiala2" HorizontalAlignment="Left" Margin="234,26,0,0" VerticalAlignment="Top" Width="110" Height="32" FontSize="14" Initialized="xiala2_Initialized" SelectedIndex="0" SelectionChanged="xiala2_SelectionChanged" />
+        <ComboBox Name="xiala3"  HorizontalAlignment="Left" Margin="349,26,0,0" VerticalAlignment="Top" Width="96" Height="32" ForceCursor="True" FontSize="14" Initialized="xiala3_Initialized" SelectedIndex="0" >
+            
+        </ComboBox>
+        <Button HorizontalAlignment="Left" Height="47" Margin="343,12.05,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.723,0.68" FontSize="22" Content="确定" Grid.Row="4" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="43,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" FontSize="22"><Run Language="zh-cn" Text="地区"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="43,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" FontSize="22" Grid.Row="1"><Run Language="zh-cn" Text="性别"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="43,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" FontSize="22" Grid.Row="3"><Run Language="zh-cn" Text="出生日期"/></TextBlock>
+        <RadioButton Name="RadioButton1" Content="女" HorizontalAlignment="Left" Height="26" Margin="214,13,0,0" VerticalAlignment="Top" Width="53" FontSize="22" Grid.Row="1"/>
+        <RadioButton  Name="RadioButton2" Content="男" HorizontalAlignment="Left" Height="26" Margin="131,13,0,0" VerticalAlignment="Top" Width="59" FontSize="22" Grid.Row="1" IsChecked="True"/>
+        <DatePicker   Name="DatePicker1"  HorizontalAlignment="Left" Height="36" Margin="147,6,0,0" Grid.Row="3" VerticalAlignment="Top" Width="315" FontSize="22" SelectedDateFormat="Short" DisplayDate="2016-09-06" Focusable="False" 
+                    />
+        <TextBox  Name="cave" HorizontalAlignment="Left" Height="36" Margin="21,96,0,0" Grid.Row="4" TextWrapping="Wrap" Text="--" VerticalAlignment="Top" Width="441" FontSize="22" IsReadOnly="True"/>
+
+
+    </Grid>
+</Window>
